@@ -41,11 +41,11 @@ end
 
 function [] = plotSelectedPowahBabeh(type)
     global gui;
-    data = readmatrix('Engine Data.csv');
-    monthListing = data{:,1};
-    temps = data{:,2};
-    
-    rpm = gui.scrollBar.Value;
+    %data = readmatrix('Engine Data.csv');
+    %monthListing = data{:,1};
+    %temps = data{:,2};
+    title(['Estimated Powah Babeh' monthString]);
+    RPM = gui.scrollBar.Value;
   % monthTemps = temps(monthListing -- rpm);
   HorsePower = (RPM * (EngineVolume + Cylinders))/ 5250
     if ~strcmp(type,'Killowatts')
@@ -53,7 +53,7 @@ function [] = plotSelectedPowahBabeh(type)
    
     end
     
-    title(['Estimated Powah Babeh' monthString]);
+    %title(['Estimated Powah Babeh' monthString]);
         end
 
 
